@@ -1,3 +1,11 @@
-<%@songs.each do |song|%>
-  <h2><%=song.title%></h2>
-<%end%>
+<ul>
+  <%@songs.each do |song|%>
+    <li><%=song.title%></li>
+    <li><%=song.release_year%></li>
+    <li><%=song.released%></li>
+    <li><%=song.genre%></li>
+    <li><%=song.artist_name%></li>
+  <%end%>
+</ul>
+
+
