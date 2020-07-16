@@ -1,13 +1,28 @@
 <h1>Index</h1>
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Released?</th>
+    <th>Release Year</th>
+    <th>Artist Name</th>
+    <th>Genre</th>
+  </tr>
 
-<ul>
-  <%@songs.each do |song|%>
-    <li><%=song.title%></li>
-    <li><%=song.release_year%></li>
-    <li><%=song.genre%></li>
-    <li><%=song.artist_name%></li>
-  <%end%>
+<% @songs.each do |song| %>
+    <tbody>
+      <tr>
+        <td><%= song.title %></td>
+        <td><%= song.released %></td>
+        <td><%= song.release_year %></td>
+        <td><%= song.artist_name %></td>
+        <td><%= song.genre %></td>
+      </tr>
+       </tbody>
+  <% end %>
   
-</ul>
+  </table>
 
-<%=@songs.size%>
+
+
+
+
